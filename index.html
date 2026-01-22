@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Colorful Job Portal</title>
+
+    <style>
+        body{
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff;
+            margin: 0;
+        }
+
+        header{
+            background-color: #1e88e5;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        header h1{
+            color: #ffeb3b;
+        }
+
+        nav{
+            background-color: #3949ab;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav a{
+            color: #ffcc80;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+
+        nav a:hover{
+            text-decoration: underline;
+        }
+
+        section{
+            background-color: white;
+            margin: 20px;
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        h2{
+            color: #8e24aa;
+        }
+
+        
+        .search-box input{
+            width: 95%;
+            padding: 10px;
+            border: 2px solid #64b5f6;
+            border-radius: 5px;
+        }
+
+        .job{
+            border: 2px solid #ce93d8;
+            padding: 15px;
+            margin-bottom: 15px;
+            background-color: #f3e5f5;
+            border-radius: 6px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .job:hover{
+            transform: scale(1.02);
+            box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+        }
+
+        .job h3{
+            color: #d81b60;
+        }
+
+        .tag{
+            display: inline-block;
+            padding: 4px 8px;
+            background-color: #81c784;
+            color: white;
+            font-size: 12px;
+            border-radius: 4px;
+            margin-bottom: 8px;
+        }
+
+        button{
+            padding: 8px 15px;
+            background-color: #ff7043;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        button:hover{
+            background-color: #f4511e;
+        }
+
+        form input, select, textarea{
+            width: 90%;
+            padding: 8px;
+            margin: 6px 0;
+            border: 2px solid #64b5f6;
+            border-radius: 5px;
+        }
+
+        form input:focus, textarea:focus{
+            outline: none;
+            border-color: #1e88e5;
+        }
+
+        footer{
+            background-color: #1e88e5;
+            color: #fbfbfb;
+            text-align: center;
+            padding: 15px;
+            font-size: 18px;  
+        }
+    </style>
+
+    <script>
+        function applyJob(jobName){
+            alert("You have successfully applied for " + jobName);
+        }
+    </script>
+</head>
+
+<body>
+
+<header>
+    <h1>Job Portal</h1>
+    <p>Find Your Dream Job</p>
+</header>
+
+<nav>
+    <a href="#">Home</a>
+    <a href="#">Jobs</a>
+    <a href="#">Profile</a>
+</nav>
+
+<section class="search-box">
+    <h2>Search Jobs</h2>
+    <input type="text" placeholder="Search by job title or company">
+</section>
+
+<section>
+    <h2>Latest Jobs</h2>
+
+    <div class="job">
+        <span class="tag">Full Time</span>
+        <h3>Software Engineer</h3>
+        <p>Company: Infosys</p>
+        <p>Location: Bangalore</p>
+        <button onclick="applyJob('Software Engineer')">Apply</button>
+    </div>
+
+    <div class="job">
+        <span class="tag">Remote</span>
+        <h3>Web Developer</h3>
+        <p>Company: TCS</p>
+        <p>Location: Work From Home</p>
+        <button onclick="applyJob('Web Developer')">Apply</button>
+    </div>
+
+    <div class="job">
+        <span class="tag">Internship</span>
+        <h3>Frontend Intern</h3>
+        <p>Company: Wipro</p>
+        <p>Location: Hyderabad</p>
+        <button onclick="applyJob('Frontend Intern')">Apply</button>
+    </div>
+</section>
+
+<section>
+    <h2>Create Profile</h2>
+
+    <form>
+        <input type="text" placeholder="Full Name" required><br>
+        <input type="email" placeholder="Email" required><br>
+        <input type="tel" placeholder="Mobile Number"><br>
+
+        <select required>
+            <option value="fresher" selected>Fresher (0 Years)</option>
+            <option value="1">1 Year</option>
+            <option value="2">2 Years</option>
+            <option value="3">3+ Years</option>
+        </select><br>
+
+        <textarea placeholder="Skills"></textarea><br>
+        <input type="file"><br><br>
+
+        <button type="submit">Submit Profile</button>
+    </form>
+</section>
+
+<footer>
+    <p>ThankYou!!</p>
+</footer>
+
+</body>
+</html>

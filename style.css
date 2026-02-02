@@ -1,0 +1,162 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    font-family: "Segoe UI", Arial, sans-serif;
+    background-color: #F5F7FB;
+    color: #1F2937;
+}
+
+header{
+    background: linear-gradient(135deg, #1D4ED8, #2563EB);
+    padding: 32px 20px;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+header h1{
+    margin: 0;
+    font-size: 38px;
+}
+
+header p{
+    margin-top: 8px;
+    font-size: 16px;
+    opacity: 0.9;
+}
+
+nav{
+    background-color: #FFFFFF;
+    padding: 14px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+nav a{
+    color: #1D4ED8;
+    margin: 0 18px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 15px;
+}
+
+nav a:hover{
+    color: #0F172A;
+}
+
+section{
+    background-color: #FFFFFF;
+    margin: 28px auto;
+    padding: 26px;
+    border-radius: 16px;
+    width: 90%;
+    max-width: 1000px;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+}
+
+h2{
+    margin-top: 0;
+    color: #1D4ED8;
+    font-size: 24px;
+}
+
+.search-box input{
+    width: 100%;
+    padding: 14px;
+    border-radius: 12px;
+    border: 1px solid #CBD5E1;
+    font-size: 15px;
+}
+
+.search-box input:focus{
+    outline: none;
+    border-color: #1D4ED8;
+}
+
+.job{
+    border: 1px solid #E5E7EB;
+    padding: 22px;
+    margin-bottom: 18px;
+    border-radius: 16px;
+    background-color: #FAFAFA;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.job:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 14px 30px rgba(29,78,216,0.18);
+}
+
+.job h3{
+    margin-top: 10px;
+    color: #0F172A;
+}
+
+.tag{
+    display: inline-block;
+    padding: 6px 12px;
+    background-color: #1D4ED8;
+    color: #FFFFFF;
+    font-size: 12px;
+    font-weight: 600;
+    border-radius: 20px;
+}
+
+button{
+    margin-top: 14px;
+    padding: 12px 22px;
+    background-color: #1D4ED8;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+button:hover{
+    background-color: #1E40AF;
+}
+
+form input,
+form textarea,
+form select{
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border-radius: 12px;
+    border: 1px solid #CBD5E1;
+    font-size: 14px;
+}
+
+form input:focus,
+form textarea:focus,
+form select:focus{
+    outline: none;
+    border-color: #1D4ED8;
+}
+
+input[type="file"]{
+    border: none;
+}
+
+footer{
+    background-color: #1D4ED8;
+    color: #FFFFFF;
+    text-align: center;
+    padding: 22px;
+    font-size: 16px;
+    margin-top: 40px;
+}
+
+@media (max-width: 768px){
+    header h1{
+        font-size: 30px;
+    }
+
+    nav a{
+        margin: 0 10px;
+    }
+}

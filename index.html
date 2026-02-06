@@ -2,87 +2,67 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <title>Find Your Dream Job</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Job Portal</title>
-
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
 <header>
-    <h1>Job Portal</h1>
-    <p>Find Your Dream Job</p>
+    <h1>Find Your Dream Job</h1>
+    <p>Opportunities that match your passion</p>
 </header>
 
-<nav>
-    <a href="#">Home</a>
-    <a href="#">Jobs</a>
-    <a href="#">Profile</a>
-</nav>
+<main>
 
-<section class="search-box">
-    <h2>Search Jobs</h2>
-    <input type="text" placeholder="Search by job title or company">
-</section>
+    <section class="search-box">
+        <input type="text" id="searchInput" placeholder="Search jobs or companies">
+    </section>
 
-<section>
-    <h2>Latest Jobs</h2>
+    <section class="jobs-section">
+        <h2>Latest Jobs (<span id="jobCount">0</span>)</h2>
 
-    <div class="job">
-        <span class="tag">Full Time</span>
-        <h3>Software Engineer</h3>
-        <p>Company: Infosys</p>
-        <p>Location: Bangalore</p>
-        <button type="button">Apply</button>
-    </div>
+        <div id="jobList">
+            <div class="job candidate-job">
+                <span class="tag full">Full Time</span>
+                <h3>Software Engineer</h3>
+                <p>Infosys</p>
+                <p>Bangalore</p>
+                <button class="apply-btn">Apply</button>
+            </div>
 
-    <div class="job">
-        <span class="tag">Remote</span>
-        <h3>Web Developer</h3>
-        <p>Company: TCS</p>
-        <p>Location: Work From Home</p>
-        <button type="button">Apply</button>
-    </div>
+            <div class="job candidate-job">
+                <span class="tag remote">Remote</span>
+                <h3>Web Developer</h3>
+                <p>TCS</p>
+                <p>Work From Home</p>
+                <button class="apply-btn">Apply</button>
+            </div>
+        </div>
+    </section>
 
-    <div class="job">
-        <span class="tag">Internship</span>
-        <h3>Frontend Intern</h3>
-        <p>Company: Wipro</p>
-        <p>Location: Hyderabad</p>
-        <button type="button">Apply</button>
-    </div>
-</section>
+    <section class="add-job">
+        <h2>Add Job</h2>
+        <form id="jobForm">
+            <input type="text" id="jobTitle" placeholder="Job Title" required>
+            <input type="text" id="companyName" placeholder="Company Name" required>
+            <input type="text" id="location" placeholder="Location" required>
+            <select id="jobType" required>
+                <option value="">Job Type</option>
+                <option>Full Time</option>
+                <option>Remote</option>
+                <option>Internship</option>
+            </select>
+            <button type="submit">Post Job</button>
+        </form>
+    </section>
 
-<section>
-    <h2>Create Profile</h2>
-
-    <form action="#">
-        <input type="text" placeholder="Full Name" required>
-
-        <input type="email" placeholder="Email" required>
-
-        <input type="tel" placeholder="Mobile Number">
-
-        <select required>
-            <option value="">Select Experience</option>
-            <option value="fresher">Fresher (0 Years)</option>
-            <option value="1">1 Year</option>
-            <option value="2">2 Years</option>
-            <option value="3">3+ Years</option>
-        </select>
-
-        <textarea placeholder="Skills"></textarea>
-
-        <input type="file">
-
-        <button type="submit">Submit Profile</button>
-    </form>
-</section>
+</main>
 
 <footer>
-    <p>Thank You!!</p>
+    <p>Find Your Dream Job</p>
 </footer>
 
+<script src="script.js"></script>
 </body>
 </html>
